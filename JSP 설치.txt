@@ -1,0 +1,51 @@
+
+1. JDK 설치 ( LTS(안정화된 버전) : 17 )
+   - Oracle 	: 1.8 만 무료
+   - Open JDK 	https://adoptopenjdk.net/
+		: 17
+
+2. Apache Tomcat (10.0.20)
+	주의! Server Shutdown Port : 8005
+	       HTTP/ 1.1 connector Port : 8181
+
+  	       Tomcat Service Name : Tomcat10			
+
+	       User Name : admin
+	       password : 1234
+
+	        C: tomcat
+
+3. 이클립스에서 톰캣을 연동
+	
+	1. Help > Install New Software > 콤보 박스 > All Available Sites > Web, XML, Java EE 체크 > restart
+
+	2. Window > perspective > open perspective > others > jave ee (JSP)
+
+	3. Window > Show View > servers
+
+	4. 하단 Servers 클릭 > Tomcat v10. Server > next > Tomcat browse > c/tomcat10 (톰캣 설치 위치)
+	   > Installed JRE > Add > Standard VM > JRE home : c:/JRE17 > 콤보박스 JDK17 선택
+
+	5. Server 더블 클릭
+
+	6. 이클립스 톰캣 서버 Tomcat admin port 8006
+			    HTTP/1.1 8282   로 변경
+           
+
+	- 톰캣 9.0 설치 
+
+
+4. JSP 구동
+
+	1. File > New > Dynamic Web Project < JSPStudy 로 만들기 
+	2. JSPStudy > Properties > UTF-8 로 변경
+	3. src > webapp > New > others > jsp File > Next > MyFile.jsp 로 변경
+
+
+	Client Side Script ( 스크립트 해석을 Clindt 웹브라우저에서 해석 ) : HTML, CSS, JS, JQurey
+	  ( Front End )
+
+	Server Side Script ( 스크립트 해석을  Server 에서 해석하고 해석된 결과를 클라이언트에게 전송) : JSP, CGI, PHP, ASP, node.js
+	  ( Back End )
+		Cilent 에서 원본 소스를 볼 수 없다. DataBase(Oracle, MSSQL, MySQL) 를 조작 (Select, Insert, Update, Delete)
+		웹 서버(톰캣)를 작동 후 결과 확인이 가능하다. ( 소스를 브라우저에서 보면 결과를 확인 할 수 없다.)
